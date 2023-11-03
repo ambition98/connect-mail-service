@@ -10,12 +10,15 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @Configuration
 public class RedisConfig {
 
-    @Value("${redis-url}")
-    private String REDIS_ENDPOINT;
+    @Value("${spring.data.redis.host}")
+    private String host;
+
+    @Value("${spring.data.redis.port}")
+    private int port;
 
     @Bean
     public LettuceConnectionFactory redisConnectionFactory() {
-        return new LettuceConnectionFactory(REDIS_ENDPOINT, 6379);
+        return new LettuceConnectionFactory(host, port);
     }
 
     @Bean

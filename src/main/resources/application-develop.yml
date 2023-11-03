@@ -4,7 +4,7 @@ spring:
 
   config:
     activate:
-      on-profile: local
+      on-profile: develop
 
   mail:
     host: smtp.gmail.com
@@ -16,8 +16,6 @@ spring:
     consumer:
       bootstrap-servers: localhost:9092
       group-id: mail-group-1
-
-redis-url: localhost
 
 eureka:
   client:

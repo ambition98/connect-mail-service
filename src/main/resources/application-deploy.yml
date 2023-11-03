@@ -30,5 +30,3 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: ${public_ip}
-
-redis-url: ${redis_url}
